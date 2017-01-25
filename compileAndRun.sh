@@ -8,16 +8,16 @@ mkdir mods
 
 echo " > compiling and packaging Advent"
 mkdir classes/org.codefx.demo.advent
-javac9 \
+javac \
 	-d classes/org.codefx.demo.advent \
 	$(find src/org.codefx.demo.advent -name '*.java')
-jar9 \
+jar \
 	-c \
 	--file mods/org.codefx.demo.advent.jar \
 	--main-class=org.codefx.demo.advent.Main \
 	-C classes/org.codefx.demo.advent/ .
 
 echo " > running Advent"
-java9 \
+java \
 	-p mods \
 	-m org.codefx.demo.advent
